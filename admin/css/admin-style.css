@@ -1,0 +1,313 @@
+:root {
+  --saaslauncher-admin--primary: #4c3efa;
+  --saaslauncher-admin--primary-accent: #c4c2fe;
+  --saaslauncher-admin--muted: #62748e;
+  --saaslauncher-admin--light: #fff;
+  --saaslauncher-admin--heading: #141822;
+  --saaslauncher-admin--border: #eaeef4;
+}
+
+.saaslauncher-display-none {
+  display: none !important;
+}
+.saaslauncher-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+#saaslauncher-admin-spinner {
+  visibility: visible !important;
+  margin: 0 !important;
+}
+
+.saaslauncher-helper-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  & .helper-link {
+    margin: 0;
+    padding: 0;
+
+    & a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--saaslauncher-admin--muted);
+    }
+
+    &.upsell-link a {
+      color: var(--saaslauncher-admin--primary);
+    }
+  }
+}
+
+/* Admin Welcome Notice */
+#saaslauncher-welcome-notice {
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  & .content-holder {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 26px 0;
+  }
+  & .notice-heading {
+    font-weight: 600;
+    margin-top: 0;
+  }
+  & .notices {
+    flex: 3;
+  }
+  & .notice-buttons {
+    margin: 12px 0;
+  }
+  & .notice-button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: transparent;
+
+    & a {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 12px;
+      color: var(--saaslauncher-admin--light);
+      background-color: var(--saaslauncher-admin--primary);
+      text-decoration: none;
+
+      &:hover {
+        background-color: var(--saaslauncher-admin--heading);
+      }
+    }
+  }
+  & .notice-button.has-spinner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  & .notice-image {
+    flex: 1;
+    margin: 0;
+    max-height: 165px;
+
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+}
+
+/* Admin Dashboard */
+#wpcontent:has(#saaslauncher-dashboard) {
+  padding-left: 0;
+  background-color: #f7f8f9;
+}
+.saaslauncher-spacer {
+  margin: 44px 0;
+
+  &.sm {
+    margin: 16px 0;
+  }
+}
+#saaslauncher-dashboard {
+  padding: 26px;
+  max-width: 1180px;
+  margin: 0 auto;
+  font-weight: 300;
+  background-color: #f7f8f9;
+  color: var(--saaslauncher-admin--muted);
+
+  & h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -1px;
+  }
+
+  & .section-title,
+  & .sidebar-title {
+    margin: 0;
+  }
+  & .section-title {
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
+  & .sidebar-title {
+    margin-bottom: 16px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    font-size: 16px;
+  }
+
+  & .buttons-group {
+    display: flex;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 14px;
+
+    &.has-spacing {
+      margin: 16px 0;
+    }
+  }
+  & .btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    & a {
+      padding: 12px 36px;
+      display: inline-block;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    &.has-spinner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+  }
+  & .btn-primary a {
+    background-color: var(--saaslauncher-admin--primary);
+    color: var(--saaslauncher-admin--light);
+
+    &:hover {
+      background-color: var(--saaslauncher-admin--heading);
+    }
+  }
+  & .btn-secondary a {
+    background-color: var(--saaslauncher-admin--primary-accent);
+    color: var(--saaslauncher-admin--primary);
+    border: 1px solid var(--saaslauncher-admin--primary);
+  }
+
+  & .saaslauncher-banner {
+    padding: 40px 26px;
+    border: 1px solid var(--saaslauncher-admin--border);
+    border-radius: 20px;
+    background-color: var(--saaslauncher-admin--light);
+  }
+  & .banner-heading {
+    margin-top: 0;
+    color: var(--saaslauncher-admin--heading);
+  }
+
+  & .cols-wrapper {
+    display: flex;
+    gap: 16px;
+  }
+  & .col-item:first-child {
+    flex: 3;
+  }
+  & .col-item:last-child {
+    flex: 1;
+
+    & .is-sticky {
+      height: fit-content;
+      position: sticky;
+      top: 0;
+    }
+  }
+
+  & .sidebar-icon {
+    display: inline-block;
+    margin-right: 2px;
+
+    & svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  & .cols-grid {
+    display: grid;
+    gap: 16px;
+
+    &.cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  & .boxed-layout {
+    padding: 28px 16px;
+    border: 1px solid var(--saaslauncher-admin--border);
+    border-radius: 20px;
+    background-color: var(--saaslauncher-admin--light);
+  }
+  & .boxed-layout.upsell-boxed-layout {
+    background-color: var(--saaslauncher-admin--primary);
+    color: var(--saaslauncher-admin--light);
+
+    & .sidebar-title {
+      color: var(--saaslauncher-admin--light);
+    }
+
+    & .check-icon {
+      background-color: #ffffff4e;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+    }
+
+    & .upsell-btn {
+      width: 100%;
+      padding: 12px 26px;
+      text-align: center;
+      display: block;
+      color: var(--saaslauncher-admin--primary);
+      background-color: var(--saaslauncher-admin--light);
+      box-sizing: border-box;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 500;
+
+      &.has-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        position: relative;
+      }
+
+      & svg {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition:
+          opacity 0.3s ease,
+          width 0.3s ease;
+        transform: rotate(-45deg);
+      }
+
+      &:hover {
+        & svg {
+          display: block;
+          width: 18px;
+          height: 18px;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

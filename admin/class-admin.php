@@ -1,0 +1,122 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+class SaasLauncher_Admin {
+	private static $instance = null;
+
+	private static $dir = SAASLAUNCHER_DIR . 'admin/';
+	private static $url = SAASLAUNCHER_URL . 'admin/';
+
+	public static function get_instance() {
+		if ( is_null( self::$instance ) ) {
+			self::$instance = new self();
+		}
+
+		return self::$instance;
+	}
+
+	private function __construct() {
+		$this->include_files();
+
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_assets' ) );
+
+		add_action( 'admin_notices', array( $this, 'welcome_notice' ) );
+
+		add_action( 'admin_menu', array( $this, 'register_theme_menu' ) );
+	}
+
+	private function include_files() {
+		require_once self::$dir . 'includes/class-admin-ajax.php';
+		SaasLauncher_Admin_Ajax::get_instance();
+	}
+
+	public function enqueue_admin_assets() {
+		if ( ! function_exists( 'get_current_screen' ) ) {
+			return;
+		}
+
+		$saaslauncher_notice_current_screen = get_current_screen();
+
+		$allowed_pages = array(
+			'dashboard',
+			'themes',
+		);
+
+		if ( ( isset( $_GET['page'] ) && ! empty( $_GET['page'] ) && 'about-saaslauncher' === $_GET['page'] ) || in_array( $saaslauncher_notice_current_screen->id, $allowed_pages, true ) ) {
+			wp_enqueue_style( 'saaslauncher-admin-style', self::$url . 'css/admin-style.css', array(), SAASLAUNCHER_VERSION, 'all' );
+
+			wp_enqueue_script( 'saaslauncher-admin-scripts', self::$url . 'js/admin-scripts.js', array( 'jquery' ), SAASLAUNCHER_VERSION, true );
+			wp_localize_script(
+				'saaslauncher-admin-scripts',
+				'ajaxObj',
+				array(
+					'ajaxURL'      => admin_url( 'admin-ajax.php' ),
+					'nonce'        => wp_create_nonce( 'saaslauncher_admin_nonce' ),
+					'welcomeNonce' => wp_create_nonce( 'saaslauncher_welcome_nonce' ),
+					'redirectURL'  => admin_url( 'themes.php?page=about-saaslauncher' ),
+					'scrollURL'    => admin_url( 'plugins.php?cozy-addons-scroll=true' ),
+					'demoURL'      => admin_url( 'themes.php?page=advanced-import' ),
+				)
+			);
+		}
+	}
+
+	public function welcome_notice() {
+		$current_screen  = get_current_screen();
+		$allowed_screens = array( 'dashboard', 'themes' );
+		if ( ! in_array( $current_screen->id, $allowed_screens, true ) || is_network_admin() || ! current_user_can( 'manage_options' ) || get_option( 'saaslauncher_dismissed_custom_notice' ) ) {
+			return;
+		}
+		?>
+		<div class="saaslauncher-admin-notice notice notice-info is-dismissible content-install-plugin theme-info-notice" id="saaslauncher-welcome-notice">
+			<div class="content-holder">
+				<div class="notices">
+					<h1 class="notice-heading"><?php esc_html_e( 'Welcome to SaasLauncher!', 'saaslauncher' ); ?></h1>
+
+					<p><?php esc_html_e( 'Everything you need to build, customize, and grow your website — beautiful templates, flexible blocks, and no code required.', 'saaslauncher' ); ?></p>
+
+					<div class="notice-buttons">
+						<?php
+						if ( is_plugin_active( 'cozy-addons/cozy-addons.php' ) ) {
+							?>
+							<button class="notice-button">
+								<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>"><?php esc_html_e( 'Try it out', 'saaslauncher' ); ?></a>
+							</button>
+							<?php
+						} else {
+							?>
+							<button id="cozy-addons-install" class="notice-button has-spinner">
+								<a href="#"><?php esc_html_e( 'Install Cozy Blocks', 'saaslauncher' ); ?></a>
+								<span class="spinner saaslauncher-display-none" id="saaslauncher-admin-spinner"></span>
+							</button>
+							<?php
+						}
+						?>
+					</div>
+
+					<?php require_once self::$dir . 'sections/helper-links.php'; ?>
+				</div>
+				<figure class="notice-image">
+					<img src="<?php echo esc_url( self::$url . 'images/theme_screen_img.png' ); ?>" />
+				</figure>
+			</div>
+		</div>
+		<?php
+	}
+
+	public function register_theme_menu() {
+		add_theme_page(
+			esc_html__( 'About SaasLauncher', 'saaslauncher' ),
+			esc_html__( 'About SaasLauncher', 'saaslauncher' ),
+			'edit_theme_options',
+			'about-saaslauncher',
+			array( $this, 'render_admin_dashboard' )
+		);
+	}
+
+	public function render_admin_dashboard() {
+		require_once self::$dir . 'index.php';
+	}
+}
