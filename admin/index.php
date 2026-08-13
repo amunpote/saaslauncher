@@ -97,4 +97,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?>
 		</aside>
 	</div>
+
+	<?php
+	if ( ! saaslauncher_premium_access() ) {
+		?>
+		<div id="cta">
+			<figure>
+				<a href="https://cozythemes.com/pricing-and-plans" target="_blank" rel="noopener">
+					<img height="450" src="https://plugins.cozythemes.com/cozy-addons/admin/assets/media/cta.png" alt="Cozy Blocks features" />
+				</a>
+			</figure>
+		</div>
+		<?php
+	}
+	?>
 </div>

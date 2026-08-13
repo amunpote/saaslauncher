@@ -46,7 +46,6 @@
         // alert(response);
         var checkJSON = /{.*}/; // Regular expression to match the JSON portion
         var match = checkJSON.exec(response);
-        console.log(response);
 
         if (match) {
           var jsonResponse = match[0]; // Extracted JSON portion
@@ -63,7 +62,6 @@
             console.log("Error parsing JSON!");
           }
         }
-        console.log(window.location.href);
 
         window.location.href = redirectURL;
 

@@ -73,30 +73,35 @@ class SaasLauncher_Admin {
 		<div class="saaslauncher-admin-notice notice notice-info is-dismissible content-install-plugin theme-info-notice" id="saaslauncher-welcome-notice">
 			<div class="content-holder">
 				<div class="notices">
-					<h1 class="notice-heading"><?php esc_html_e( 'Welcome to SaasLauncher!', 'saaslauncher' ); ?></h1>
+					<figure class="brand-logo">
+						<img width="44" height="44" src="<?php echo esc_url( self::$url . 'images/cozy-addons-icon.png' ); ?>" alt="Cozy Blocks logo" />
+					</figure>
 
-					<p><?php esc_html_e( 'Everything you need to build, customize, and grow your website — beautiful templates, flexible blocks, and no code required.', 'saaslauncher' ); ?></p>
-
-					<div class="notice-buttons">
-						<?php
-						if ( is_plugin_active( 'cozy-addons/cozy-addons.php' ) ) {
-							?>
-							<button class="notice-button">
-								<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>"><?php esc_html_e( 'Try it out', 'saaslauncher' ); ?></a>
-							</button>
+					<div>
+						<p class="highlighted-text"><?php esc_html_e( 'Welcome to SaasLauncher! 🎉', 'cozy-addons' ); ?></p>
+						<h2 class="notice-heading"><?php esc_html_e( 'Supercharge Your Website with Cozy Blocks', 'saaslauncher' ); ?></h2>
+	
+						<p><?php esc_html_e( 'Everything you need to build, customize, and grow your website — beautiful templates, flexible blocks, and no code required.', 'saaslauncher' ); ?></p>
+	
+						<div class="notice-buttons">
 							<?php
-						} else {
+							if ( is_plugin_active( 'cozy-addons/cozy-addons.php' ) ) {
+								?>
+								<button class="notice-button">
+									<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>"><?php esc_html_e( 'Try it out', 'saaslauncher' ); ?></a>
+								</button>
+								<?php
+							} else {
+								?>
+								<button id="cozy-addons-install" class="notice-button has-spinner">
+									<a href="#"><?php esc_html_e( 'Install Cozy Blocks →', 'saaslauncher' ); ?></a>
+									<span class="spinner saaslauncher-display-none" id="saaslauncher-admin-spinner"></span>
+								</button>
+								<?php
+							}
 							?>
-							<button id="cozy-addons-install" class="notice-button has-spinner">
-								<a href="#"><?php esc_html_e( 'Install Cozy Blocks', 'saaslauncher' ); ?></a>
-								<span class="spinner saaslauncher-display-none" id="saaslauncher-admin-spinner"></span>
-							</button>
-							<?php
-						}
-						?>
+						</div>
 					</div>
-
-					<?php require_once self::$dir . 'sections/helper-links.php'; ?>
 				</div>
 				<figure class="notice-image">
 					<img src="<?php echo esc_url( self::$url . 'images/theme_screen_img.png' ); ?>" />

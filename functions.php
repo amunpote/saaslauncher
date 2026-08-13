@@ -86,6 +86,16 @@ function saaslauncher_add_woocommerce_support() {
 }
 add_action( 'after_setup_theme', 'saaslauncher_add_woocommerce_support' );
 
+function saaslauncher_premium_access() {
+	$status = false;
+
+	if ( function_exists( 'cozy_addons_premium_access' ) ) {
+		$status = cozy_addons_premium_access();
+	}
+
+	return $status;
+}
+
 /* Admin init */
 if ( is_admin() ) {
 	require_once SAASLAUNCHER_DIR . 'admin/class-admin.php';
