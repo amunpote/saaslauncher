@@ -149,6 +149,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	if ( ! saaslauncher_premium_access() ) {
 		?>
+	<div class="saaslauncher-spacer"></div>
+	
 	<div id="cta">
 		<figure class="featured-image">
 			<a href="https://cozythemes.com/pricing-and-plans" target="_blank" rel="noopener">

@@ -22,7 +22,7 @@
 		</div>
 		<button class="btn btn-success">
 			<a>
-				<?php esc_html_e( 'Comleted', 'saaslauncher' ); ?>
+				<?php esc_html_e( 'Completed', 'saaslauncher' ); ?>
 			</a>
 		</button>
 	</div>
@@ -68,7 +68,7 @@
 			?>
 		<button class="btn btn-success">
 			<a>
-				<?php esc_html_e( 'Comleted', 'saaslauncher' ); ?>
+				<?php esc_html_e( 'Completed', 'saaslauncher' ); ?>
 			</a>
 		</button>
 			<?php

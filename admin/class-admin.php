@@ -78,7 +78,7 @@ class SaasLauncher_Admin {
 						<p class="highlighted-text"><?php esc_html_e( 'Welcome to SaasLauncher! 🎉', 'saaslauncher' ); ?></p>
 						<h2 class="notice-heading"><?php esc_html_e( 'Supercharge Your Website with Cozy Blocks', 'saaslauncher' ); ?></h2>
 	
-						<p><?php esc_html_e( "Skip the manual setup — starter templates, ready-made patterns, and powerful blocks are one click away with Cozy Blocks. Perfect whether you're just getting started or already deep into your build.", 'saaslauncher' ); ?></p>
+						<p><?php esc_html_e( 'Build faster and launch sooner with Cozy Blocks—powerful blocks, ready-made sections, and starter templates help you create stunning websites without starting from scratch.', 'saaslauncher' ); ?></p>
 	
 						<div class="notice-buttons">
 							<?php

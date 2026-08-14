@@ -17,7 +17,7 @@
 		<div class="saaslauncher-spacer sm"></div>
 
 		<?php
-		if ( saaslauncher_is_plugin_activated( 'cozy-essential-addons/cozy-essential-addons.php' ) && saaslauncher_is_plugin_activated( 'advanced-import/advanced-import.php' ) ) {
+		if ( saaslauncher_is_plugin_activated( 'cozy-addons/cozy-addons.php' ) && saaslauncher_is_plugin_activated( 'cozy-essential-addons/cozy-essential-addons.php' ) && saaslauncher_is_plugin_activated( 'advanced-import/advanced-import.php' ) ) {
 			?>
 		<button class="btn btn-primary-accent">
 			<a

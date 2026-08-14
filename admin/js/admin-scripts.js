@@ -101,7 +101,11 @@
         ajaxURL,
         {
           action: "saaslauncher_install_and_activate_plugins",
-          plugins: JSON.stringify(["cozy-essential-addons", "advanced-import"]),
+          plugins: JSON.stringify([
+            "cozy-addons",
+            "cozy-essential-addons",
+            "advanced-import",
+          ]),
           nonce: welcomeNonce,
         },
         function (response) {
