@@ -78,7 +78,7 @@ class SaasLauncher_Admin {
 					</figure>
 
 					<div>
-						<p class="highlighted-text"><?php esc_html_e( 'Welcome to SaasLauncher! 🎉', 'cozy-addons' ); ?></p>
+						<p class="highlighted-text"><?php esc_html_e( 'Welcome to SaasLauncher! 🎉', 'saaslauncher' ); ?></p>
 						<h2 class="notice-heading"><?php esc_html_e( 'Supercharge Your Website with Cozy Blocks', 'saaslauncher' ); ?></h2>
 	
 						<p><?php esc_html_e( 'Everything you need to build, customize, and grow your website — beautiful templates, flexible blocks, and no code required.', 'saaslauncher' ); ?></p>
@@ -88,12 +88,15 @@ class SaasLauncher_Admin {
 							if ( is_plugin_active( 'cozy-addons/cozy-addons.php' ) ) {
 								?>
 								<button class="notice-button">
-									<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>"><?php esc_html_e( 'Try it out', 'saaslauncher' ); ?></a>
+									<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>"><?php esc_html_e( 'Customize', 'saaslauncher' ); ?></a>
+								</button>
+								<button class="notice-button notice-button-secondary">
+									<a href="<?php echo esc_url( admin_url( 'themes.php?page=about-saaslauncher' ) ); ?>"><?php esc_html_e( 'Getting Started', 'saaslauncher' ); ?></a>
 								</button>
 								<?php
 							} else {
 								?>
-								<button id="cozy-addons-install" class="notice-button has-spinner">
+								<button class="cozy-addons-install notice-button has-spinner">
 									<a href="#"><?php esc_html_e( 'Install Cozy Blocks →', 'saaslauncher' ); ?></a>
 									<span class="spinner saaslauncher-display-none" id="saaslauncher-admin-spinner"></span>
 								</button>

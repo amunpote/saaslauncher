@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<div class="saaslauncher-spacer sm"></div>
 					<button class="btn btn-tertiary is-full-width">
 						<a href="https://wordpress.org/support/theme/saaslauncher/reviews/#new-post"
-							target="_blank"><?php esc_html_e( 'Leave a Review' ); ?></a>
+							target="_blank"><?php esc_html_e( 'Leave a Review', 'saaslauncher' ); ?></a>
 					</button>
 				</div>
 				<?php

@@ -1,11 +1,11 @@
 <div class="faqs boxed-layout">
-	<h2 class="section-title"><?php esc_html_e( 'Frequently Asked Questions', 'cozy-addons' ); ?></h2>
-	<p><?php esc_html_e( 'Find quick answers about Cozy Blocks, its features, compatibility, Free vs Pro, and getting started.', 'cozy-addons' ); ?>
+	<h2 class="section-title"><?php esc_html_e( 'Frequently Asked Questions', 'saaslauncher' ); ?></h2>
+	<p><?php esc_html_e( 'Find quick answers about Cozy Blocks, its features, compatibility, Free vs Pro, and getting started.', 'saaslauncher' ); ?>
 	</p>
 	<div class="cozy-accordion">
 		<div class="accordion-item active">
 			<div class="accordion-header">
-				<h3><?php esc_html_e( 'Is Cozy Blocks necessary?', 'cozy-addons' ); ?></h3>
+				<h3><?php esc_html_e( 'Is Cozy Blocks necessary?', 'saaslauncher' ); ?></h3>
 				<i class="chevron">
 					<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -15,14 +15,14 @@
 				</i>
 			</div>
 			<div class="accordion-body">
-				<p><?php esc_html_e( 'Cozy Blocks is a powerful WordPress plugin that offers 50+ advanced Gutenberg blocks built specifically for the Full Site Editing (FSE) experience. It allows you to design complete websites visually — including post grids, WooCommerce layouts, galleries, portfolios, and more — all without using third-party page builders or custom code.', 'cozy-addons' ); ?>
+				<p><?php esc_html_e( 'Cozy Blocks is a powerful WordPress plugin that offers 50+ advanced Gutenberg blocks built specifically for the Full Site Editing (FSE) experience. It allows you to design complete websites visually — including post grids, WooCommerce layouts, galleries, portfolios, and more — all without using third-party page builders or custom code.', 'saaslauncher' ); ?>
 				</p>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			<div class="accordion-header">
-				<h3><?php esc_html_e( 'Is Cozy Blocks compatible with all WordPress themes?', 'cozy-addons' ); ?></h3>
+				<h3><?php esc_html_e( 'Is Cozy Blocks compatible with all WordPress themes?', 'saaslauncher' ); ?></h3>
 				<i class="chevron">
 					<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -32,14 +32,14 @@
 				</i>
 			</div>
 			<div class="accordion-body">
-				<p><?php esc_html_e( 'Cozy Blocks is only compatible with block-based (FSE) WordPress themes. It does not support classic themes or the Classic Editor. To get the full benefits of Cozy Blocks, you must use it with a modern block theme like SaasLauncher, HomeLancer, Jetnews Magazine, WoxStore, or any compatible Full Site Editing theme available on WordPress.org.', 'cozy-addons' ); ?>
+				<p><?php esc_html_e( 'Cozy Blocks is only compatible with block-based (FSE) WordPress themes. It does not support classic themes or the Classic Editor. To get the full benefits of Cozy Blocks, you must use it with a modern block theme like SaasLauncher, HomeLancer, Jetnews Magazine, WoxStore, or any compatible Full Site Editing theme available on WordPress.org.', 'saaslauncher' ); ?>
 				</p>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			<div class="accordion-header">
-				<h3><?php esc_html_e( 'Is Cozy Blocks a replacement for Elementor or Divi?', 'cozy-addons' ); ?></h3>
+				<h3><?php esc_html_e( 'Is Cozy Blocks a replacement for Elementor or Divi?', 'saaslauncher' ); ?></h3>
 				<i class="chevron">
 					<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -49,14 +49,14 @@
 				</i>
 			</div>
 			<div class="accordion-body">
-				<p><?php esc_html_e( 'Yes — for block-theme users. Cozy Blocks gives you the same design capabilities (hero sections, pricing tables, sliders, mega menus, popups, WooCommerce layouts) inside the native WordPress Block Editor, without installing a separate page builder. If your site uses a modern FSE block theme, Cozy Blocks replaces everything Elementor and Divi do, while being significantly faster and lighter.', 'cozy-addons' ); ?>
+				<p><?php esc_html_e( 'Yes — for block-theme users. Cozy Blocks gives you the same design capabilities (hero sections, pricing tables, sliders, mega menus, popups, WooCommerce layouts) inside the native WordPress Block Editor, without installing a separate page builder. If your site uses a modern FSE block theme, Cozy Blocks replaces everything Elementor and Divi do, while being significantly faster and lighter.', 'saaslauncher' ); ?>
 				</p>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			<div class="accordion-header">
-				<h3><?php esc_html_e( 'Building client websites as a freelancer or agency?', 'cozy-addons' ); ?></h3>
+				<h3><?php esc_html_e( 'Building client websites as a freelancer or agency?', 'saaslauncher' ); ?></h3>
 				<i class="chevron">
 					<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -66,14 +66,14 @@
 				</i>
 			</div>
 			<div class="accordion-body">
-				<p><?php esc_html_e( 'Import a complete homepage template for your client’s niche in one click, then customize it fully inside the Site Editor. No third-party dependencies.', 'cozy-addons' ); ?>
+				<p><?php esc_html_e( 'Import a complete homepage template for your client’s niche in one click, then customize it fully inside the Site Editor. No third-party dependencies.', 'saaslauncher' ); ?>
 				</p>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			<div class="accordion-header">
-				<h3><?php esc_html_e( 'Running a WooCommerce store?', 'cozy-addons' ); ?></h3>
+				<h3><?php esc_html_e( 'Running a WooCommerce store?', 'saaslauncher' ); ?></h3>
 				<i class="chevron">
 					<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -83,14 +83,14 @@
 				</i>
 			</div>
 			<div class="accordion-body">
-				<p><?php esc_html_e( 'Product grids, category blocks, quick view, wishlist, product sliders, and add-to-cart blocks work natively without extra plugins.', 'cozy-addons' ); ?>
+				<p><?php esc_html_e( 'Product grids, category blocks, quick view, wishlist, product sliders, and add-to-cart blocks work natively without extra plugins.', 'saaslauncher' ); ?>
 				</p>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			<div class="accordion-header">
-				<h3><?php esc_html_e( 'Publishing a blog, news site, or magazine?', 'cozy-addons' ); ?></h3>
+				<h3><?php esc_html_e( 'Publishing a blog, news site, or magazine?', 'saaslauncher' ); ?></h3>
 				<i class="chevron">
 					<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -100,14 +100,14 @@
 				</i>
 			</div>
 			<div class="accordion-body">
-				<p><?php esc_html_e( 'Post grids, news tickers, trending posts, magazine-style layouts, and categorized post tabs are all included — no theme dependency.', 'cozy-addons' ); ?>
+				<p><?php esc_html_e( 'Post grids, news tickers, trending posts, magazine-style layouts, and categorized post tabs are all included — no theme dependency.', 'saaslauncher' ); ?>
 				</p>
 			</div>
 		</div>
 
 		<div class="accordion-item">
 			<div class="accordion-header">
-				<h3><?php esc_html_e( 'New to WordPress?', 'cozy-addons' ); ?></h3>
+				<h3><?php esc_html_e( 'New to WordPress?', 'saaslauncher' ); ?></h3>
 				<i class="chevron">
 					<svg width="17" height="9" viewBox="0 0 17 9" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -117,7 +117,7 @@
 				</i>
 			</div>
 			<div class="accordion-body">
-				<p><?php esc_html_e( 'The 700+ ready-made patterns and 50+ homepage templates mean you can start with a professionally designed page, not a blank screen.', 'cozy-addons' ); ?>
+				<p><?php esc_html_e( 'The 700+ ready-made patterns and 50+ homepage templates mean you can start with a professionally designed page, not a blank screen.', 'saaslauncher' ); ?>
 				</p>
 			</div>
 		</div>

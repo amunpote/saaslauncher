@@ -109,6 +109,18 @@
       }
     }
   }
+  & .notice-button.notice-button-secondary a {
+    margin-left: 10px;
+    background-color: transparent;
+    color: var(--saaslauncher-admin--heading);
+    border: 1px solid var(--saaslauncher-admin--border);
+
+    &:hover {
+      background-color: var(--saaslauncher-admin--heading);
+      color: var(--saaslauncher-admin--light);
+      border-color: var(--saaslauncher-admin--heading-accent);
+    }
+  }
   & .notice-button.has-spinner {
     display: flex;
     align-items: center;
