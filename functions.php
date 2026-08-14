@@ -96,6 +96,14 @@ function saaslauncher_premium_access() {
 	return $status;
 }
 
+function saaslauncher_is_plugin_installed( $plugin_slug ) {
+	$plugin_path = WP_PLUGIN_DIR . '/' . $plugin_slug;
+	return file_exists( $plugin_path );
+}
+function saaslauncher_is_plugin_activated( $plugin_slug ) {
+	return is_plugin_active( $plugin_slug );
+}
+
 /* Admin init */
 if ( is_admin() ) {
 	require_once SAASLAUNCHER_DIR . 'admin/class-admin.php';
