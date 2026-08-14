@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="saaslauncher-banner">
 	<div class="inner-wrap">
+		<p class="section-pill"><?php esc_html_e( 'Powered by Cozy Blocks', 'saaslauncher' ); ?></p>
 		<h1 class="banner-heading"><?php esc_html_e( 'Welcome to SaasLauncher 👋', 'saaslauncher' ); ?></h1>
 		<p><?php esc_html_e( 'Everything you need to create a beautiful, professional website is ready to go. Powered by Cozy Blocks, SaasLauncher gives you flexible design options and powerful tools to build your site your way. Start with a pre-built Starter Template or unlock more with Pro.', 'saaslauncher' ); ?>
 		</p>
@@ -21,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			} else {
 				?>
 				<button class="btn btn-primary">
-					<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>"><?php esc_html_e( 'Start with a Template →', 'saaslauncher' ); ?></a>
+					<a href="<?php echo esc_url( admin_url( 'site-editor.php' ) ); ?>"><?php esc_html_e( 'Start with a Starter Template →', 'saaslauncher' ); ?></a>
 				</button>
 				<?php
 			}
@@ -42,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								stroke-linejoin="round" />
 						</svg>
 					</i>
-					<?php esc_html_e( 'Upgrade to Pro', 'saaslauncher' ); ?>
+					<?php esc_html_e( 'Unlock Pro', 'saaslauncher' ); ?>
 				</a>
 			</button>
 				<?php

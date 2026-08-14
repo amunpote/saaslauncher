@@ -6,7 +6,7 @@
 
 		<div class="saaslauncher-spacer sm"></div>
 
-		<p><?php esc_html_e( 'Choose from professionally designed starter templates to launch your website faster, then customize and expand your pages with hundreds of ready-made patterns from the Cozy Blocks library.', 'saaslauncher' ); ?>
+		<p><?php esc_html_e( 'Choose from free starter templates to launch fast, then customize with patterns from the Cozy Blocks library. Want more starting points? Pro unlocks 50+ templates across every niche.', 'saaslauncher' ); ?>
 		</p>
 
 		<div class="saaslauncher-spacer sm"></div>

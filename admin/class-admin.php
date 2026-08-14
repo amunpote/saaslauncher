@@ -53,11 +53,8 @@ class SaasLauncher_Admin {
 				'ajaxObj',
 				array(
 					'ajaxURL'      => admin_url( 'admin-ajax.php' ),
-					'nonce'        => wp_create_nonce( 'saaslauncher_admin_nonce' ),
 					'welcomeNonce' => wp_create_nonce( 'saaslauncher_welcome_nonce' ),
 					'redirectURL'  => admin_url( 'themes.php?page=about-saaslauncher' ),
-					'scrollURL'    => admin_url( 'plugins.php?cozy-addons-scroll=true' ),
-					'demoURL'      => admin_url( 'themes.php?page=advanced-import' ),
 				)
 			);
 		}
@@ -81,7 +78,7 @@ class SaasLauncher_Admin {
 						<p class="highlighted-text"><?php esc_html_e( 'Welcome to SaasLauncher! 🎉', 'saaslauncher' ); ?></p>
 						<h2 class="notice-heading"><?php esc_html_e( 'Supercharge Your Website with Cozy Blocks', 'saaslauncher' ); ?></h2>
 	
-						<p><?php esc_html_e( 'Everything you need to build, customize, and grow your website — beautiful templates, flexible blocks, and no code required.', 'saaslauncher' ); ?></p>
+						<p><?php esc_html_e( "Skip the manual setup — starter templates, ready-made patterns, and powerful blocks are one click away with Cozy Blocks. Perfect whether you're just getting started or already deep into your build.", 'saaslauncher' ); ?></p>
 	
 						<div class="notice-buttons">
 							<?php

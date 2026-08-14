@@ -55,7 +55,7 @@
 
   & p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   & .highlighted-text {
@@ -80,8 +80,8 @@
     margin: 0 0 12px;
   }
   & .notices {
-    flex: 2;
     display: flex;
+    width: 60%;
     gap: 10px;
   }
   & .notice-buttons {

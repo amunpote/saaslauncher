@@ -46,7 +46,7 @@ class SaasLauncher_Admin_Ajax {
 		$requested_plugins = isset( $_POST['plugins'] ) ? json_decode( sanitize_text_field( wp_unslash( $_POST['plugins'] ) ) ) : array();
 
 		$allowed_plugins = array(
-			'saaslauncher',
+			'cozy-addons',
 			'cozy-essential-addons',
 			'advanced-import',
 		);

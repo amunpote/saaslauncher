@@ -59,7 +59,7 @@
 			fill="#5858FA" />
 	</svg>
 	<div>
-		<h2 class="section-title"><?php esc_html_e( 'No Risk, 100% Money Back Guarantee!', 'saaslauncher' ); ?></h2>
+		<h2 class="section-title"><?php esc_html_e( 'Upgrade risk-free, 100% Money Back Guarantee!', 'saaslauncher' ); ?></h2>
 		<p><strong
 				style="color:var(--saaslauncher-admin--heading)"><?php esc_html_e( 'Shop with confidence.', 'saaslauncher' ); ?></strong>
 			<?php esc_html_e( 'If our product doesn’t meet your needs and our support team can’t resolve the issue, get a ', 'saaslauncher' ); ?><strong
